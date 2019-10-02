@@ -73,7 +73,7 @@ button:hover {
     }
   
  .shopping-cart-bg{
- 	background-image: url("img/shopping_Cart_background.png");
+ 	background-image: url("img/sc_background.png");
 	background-position: center;
 	background-size: cover;
 	height: 900px;
