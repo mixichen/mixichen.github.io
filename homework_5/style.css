@@ -1,0 +1,321 @@
+
+.wrapper {
+	min-width: 1000px;
+	max-width: 1920px;
+	margin: auto;
+}
+
+body{
+  	font-family: 'Osward', sans-serif;
+	position: static;
+  }
+
+
+p {
+	text-align: center;
+}
+
+
+span{
+	font-size: 13px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+	text-align: center;
+	border-radius: 10px;
+	background-color: #3B5162;
+	color: white;
+	display: inline-block;
+	border: 1px dashed #588888;
+	font-family: 'Osward', sans-serif;
+	padding: 20px;
+	font-size: 25px;
+	width:120%;
+	
+}
+
+button:hover {
+	background-color: gray;
+	
+	
+}
+
+
+/* Background
+-----------------------------------------------------------------------------*/
+.homepage-bg {
+	background-image: url("img/homepage_background.jpg");
+	background-position: center;
+	background-size: cover;
+	height: 900px;
+	background-repeat: no-repeat;
+	
+    }
+
+.products-bg {
+	background-image: url("img/products_background.png");
+	background-position: center;
+	background-size: cover;
+	height: 900px;
+	background-repeat: no-repeat;
+    }
+
+.details-bg {
+	background-image: url("img/details_background.png");
+	background-position: center;
+	background-size: cover;
+	height: 900px;
+	background-repeat: no-repeat;
+    }
+  
+ .shopping-cart-bg{
+ 	background-image: url("img/shopping_Cart_background.png");
+	background-position: center;
+	background-size: cover;
+	height: 900px;
+	background-repeat: no-repeat;
+ }
+ 
+
+
+/* Header
+-----------------------------------------------------------------------------*/
+
+.header {
+	height: 250px;
+}
+
+.logo {
+	margin: auto;
+    padding-left: 20px;
+    transform: rotate(-15deg);
+    transform-origin: 20% 10%;
+
+}
+
+
+.search-bar  {
+  position: absolute;
+  background-color: white;
+  top:50px;
+  right: 150px;
+  border: 2px solid gray;
+  border-radius: 10px;
+}
+
+.search-bar input[type=text] {
+
+  margin:6px;
+  font-size: 17px;
+  border: none;
+}
+
+.shopping-cart{
+	position: absolute;
+	right: 55px;
+	top:50px;
+}
+
+/* Middle
+-----------------------------------------------------------------------------*/
+.middle {
+	border-left: 320px solid #84C8B9;
+}
+
+.main {
+	width: 100%;
+	float: left;
+	margin-right: -100%;
+	padding-left: 300px;
+}
+
+.content {
+	padding-right: 20px;
+	margin-top: -150px;
+}
+
+/* Left Sidebar
+-----------------------------------------------------------------------------*/
+
+.left-sidebar {
+	float: left;
+	width: 320px;
+	position: relative;
+	left: -200px;
+}
+
+
+
+/* Homepage Specific
+-----------------------------------------------------------------------------*/
+
+.introduction {
+    text-align: center;
+    font-size: 30px;
+    margin: 150px 220px 0px;
+    color: #523C00;
+}
+
+
+.container {
+  position: relative;
+  width: 20%;
+  margin:auto;
+}
+
+.container img {
+  width: 100%;
+  height: auto;
+}
+
+.container button {
+	position: absolute;
+  	top: 100%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+  	-ms-transform: translate(-50%, -50%);
+}
+
+section {
+	display: flex;
+	align-items: flex-start;
+	padding: 20px 300px;
+}
+
+.shop-dog {
+	background-color: #6D3131;
+}
+
+/* Products Page Specific
+-----------------------------------------------------------------------------*/
+
+.row {
+  display: flex;
+  align-items: flex-start;
+
+}
+
+.row img{
+ border: 2px dashed gray;
+}
+
+.column { 
+  flex: 20%;
+  padding: 50px;
+}
+
+.filter {
+	line-height: 150%;
+
+}
+
+a:link {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: black;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+/* Details Page Specific
+-----------------------------------------------------------------------------*/
+
+.three-columns{
+	margin: 50px;
+
+}
+
+#left {
+  width: 10%;
+
+}
+
+#left a {
+	font-size: 30px;
+	position: absolute;
+	bottom: 30px;
+}
+
+#left img {
+  transform: translate(250%, 0%)
+}
+
+
+#center {
+  width: 40%;
+}
+
+#right {
+	width: 30%;
+	line-height: 200%;
+}
+
+#right strong{
+	font-size: 30px;
+}
+
+#right span{
+	font-size: 25px;
+}
+
+#right button{
+	position: absolute;
+	bottom: 100px;
+	right: 130px;
+	height: 70px;
+	width: 400px;
+}
+
+/* Shopping Cart Page Specific
+-----------------------------------------------------------------------------*/
+.sc-container{
+	position:relative;
+	width: 700px;
+	height: 500px;
+	margin:100px auto;
+
+}
+
+.sc-container button{
+	position: absolute;
+	bottom: 0;
+	right:0;
+	height: 70px;
+	width: 400px;
+}
+
+.sc-container strong {
+	font-size: 40px;
+}
+
+.shopped-item{
+	width:700px;
+	background-color: white;
+	height: 150px;
+	border:3px dashed gray;
+	display:flex;
+  	align-items: center;
+  	flex-direction: row;
+  	justify-content: space-between;
+  	padding: 30px;
+}
+
+.shopped-item img{
+	width: 100%;
+  	height: auto;}
+
+ #img {
+ 	width: 20%;
+ }
