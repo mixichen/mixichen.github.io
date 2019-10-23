@@ -1,10 +1,14 @@
+
+//* product details page*//
+
+//Show selected size// 
 function showSelectedSize() {
     var size = document.getElementById('sizeSelections');
     var value = size[size.selectedIndex].value;
     document.getElementById("size_selected").textContent = value;
 };
 
-
+//Record number of items added to shopping cart // 
 		var clicks = 0;
 function ItemCount() {
 		var quantity = parseInt(document.getElementById("quantitySelection").value);
@@ -12,6 +16,7 @@ function ItemCount() {
 	   	document.getElementById('numOfItems').innerHTML = clicks;
 };
 
+//Show selected color + change product image accordingly// 
 function showSelectedColor() {
    var color = document.getElementsByName('color');
    var img = document.getElementById("coolHarnessImg");
@@ -27,6 +32,8 @@ function showSelectedColor() {
     	}
 	}
 };
+
+//Pop-up message to confirm that item(s) added to shopping cart// 
 
 function confirmAdd() {
 	alert ('Added to shopping cart!')
