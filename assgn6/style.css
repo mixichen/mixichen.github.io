@@ -135,6 +135,15 @@ strike {
   top:50px;
 }
 
+#displaynumOfItems {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff6600;
+  position: absolute;
+  right: 70px;
+  top:50px;
+}
+
 .dot {
   height: 25px;
   width: 25px;
@@ -355,7 +364,6 @@ a:hover {
 	font-size: 16px;
 	font-weight: bold;
 }
-
 /* Shopping Cart Page Specific
 -----------------------------------------------------------------------------*/
 .sc-container{
@@ -367,9 +375,10 @@ a:hover {
 }
 
 .sc-container button{
-	position: absolute;
+	position: relative;
 	bottom: 0;
 	right:0;
+	left:500px;
 	height: 70px;
 	width: 400px;
 }
@@ -381,13 +390,15 @@ a:hover {
 .shopped-item{
 	width:700px;
 	background-color: white;
-	height: 150px;
+	height: 200px;
 	border:3px dashed gray;
 	display:flex;
   	align-items: center;
   	flex-direction: row;
   	justify-content: space-between;
   	padding: 30px;
+  	margin: 20px;
+  	line-height: 0.5;
 }
 
 .shopped-item img{
@@ -398,8 +409,12 @@ a:hover {
  	width: 20%;
  }
 
-.remove{
+#remove{
 	color:grey;
+}
+
+#remove:hover {
+	text-decoration: underline;
 }
 
  /* Sale Page Specific
