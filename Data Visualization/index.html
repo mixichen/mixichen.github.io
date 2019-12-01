@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>The Vaping Effect</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Load Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+
+  <!-- Load Jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <!-- Load d3.js -->
+  <script src="https://d3js.org/d3.v4.js"></script>
+  <script src="https://d3js.org/d3-selection-multi.v0.4.min.js"></script>
+  <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+  
+  <!-- Load Vegalite -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.0.0-beta.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@5"></script>
+  <script src="js/vega-lite-api.js"></script>
+  
+  <!-- JS -->
+  <script src="js/functions.js"></script>
+
+</head>
+
+
+
+    <div id="viewport" class="l-viewport">
+      <div class="l-wrapper">
+
+<!-- Side Nav -->
+        <nav class="l-side-nav">
+          <ul class="side-nav">
+            <li class="is-active"><span>Home</span></li>
+            <li><span></span></li>
+            <li><span></span></li>
+            <li><span></span></li>
+            <li><span></span></li>
+            <li><span></span></li>
+            <li><span></span></li>
+            <li><span></span></li>
+          </ul>
+        </nav>
+
+<!-- Main Content -->
+        <ul class="l-main-content main-content">
+
+<!-- Title Page -->
+          <li class="l-section section section--is-active">
+            <div class="intro">
+              <div class="intro--banner">
+                <h1>THE VAPING EFFECT</h1>
+                <p> A story about teengers’ e-cigarette epidemic.<p>
+                 <a href="#0">scroll to start
+                  <span>
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                    <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000) rotate(270)">
+                      <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
+                    </g>
+                    </svg>
+                  </span>
+                </a>
+              </div>
+
+            </div>
+          </li>
+
+<!-- Disease outbreak -->
+          <li class="l-section section" onmouseover="AnimeIn(this); this.onmouseover = null;">
+            <div class="work">
+              <h2>A vaping outbreak caused 42 deaths </h2>
+              <p> Since March 31, 2019, there has been 2,172 cases of vaping-related lung diseases outbreak. As of November 13, 2019, 42 deaths has been confirmed. Over 16% of the patients are under 18. </p>
+              <div id="age_viz" ></div> 
+            </div>
+          </li>
+
+
+<!-- Reasons for disease -->
+          <li class="l-section section">
+            <div class="contact">
+              <h2>The cause of disease has yet to be identified</h2>
+              <div class="contact--lockup">
+                <p>While Vitamin E acetate and THC have been identified by the CDC as the substances of concern in this outbreak, the definitive cause of the disease is still under investigation.</p>
+                <div id="substances_viz" ></div> 
+              </div>
+            </div>
+          </li>
+
+
+
+<!-- Popularity of e-cigarrate -->
+          <li class="l-section section">
+            <div class="about">
+              <div class="about--banner">
+              <br><br><br>
+              <p> Anyone who is using e-cigarrete could be subject to the illness. The <strong>3.05 million </strong> high school students and <strong> 570,000 </strong> middle school students currently using e-cigarettes are especially at risk. </p>
+              <img src="assets/usage_illustration.png" alt="usage illustration" style="width:100%">
+
+              <h3> Compare the usage of E-cigarretes and other tobacco products among teenagers: </h3>
+              <br> 
+              <!-- Initialize a select button-->
+              <select id="selectButton"></select> 
+              <h4>vs.</h4>
+              <h4>E-cigarettes </h4>
+              <div class="studentUsage">
+                <div id="usage_viz"></div>
+                <div id="usage_viz2"></div>
+              </div>
+              </div>
+            </div>
+          </li>
+
+<!-- Usage has increased -->
+          <li class="l-section section">
+            <div class="hire">
+              <h2>In fact, vaping addiction has been on the rise.</h2>
+              <p>Each year more teenagers are adopting e-smoking and it's rising at an alarming rate. Since 2018, there has been an <strong> avergae rate of 18% increase </strong>in vaping among high-school students. By this rate, in 3 years more than half of high-school students will be vaping e-cigarette in some form or another. </p>
+              <br> <br>
+              <div id="vis_trends"></div>
+            </div>
+          </li>
+
+<!-- Reasons for vaping -->
+             <li class="l-section section">
+            <div class="work">
+              <h2>But why is vaping so popular?</h2>
+              <p> According to CDC, the number one reason for vaping is "influence from family and friends." However, "preference and affinity for e-cigarette flavors" has also caught up in the last year to become a top reason for vaping among high-schoolers.<p>
+              <div id="vis_reasons"></div>
+            </div>
+          </li>
+
+<!-- Call to actions -->
+             <li class="l-section section">
+              <div class="work">
+                <h2>It's important to take actions, now</h2>
+                <p> Now that the reasons for vaping is clear, the CDC advises that parents "set a good example by being tobacco-free and ensure that your kid is not exposed to the secondhand emissions from any tobacco products, including e-cigarettes." <br><br>
+                Additionally, We believe that there should be an increased awareness created around this subject in the following ways:
+                <ol>
+                  <ul>1. Young people should be educated about the outbreak of deadly diseases possible through use of e-cigarettes.</ul><br>
+                  <ul>2. Parents should conduct a serious discussion around the vaping behaviour and educate their kids about why e-cigarettes are harmful to them.</ul> <br>
+                  <ul>3. Make youth health a compulsory and participatory subject in high-school curriculum where a significant focus in also given to vaping behavior.</ul>
+                </ol>
+            </li>
+
+<!-- Call to actions -->
+               <li class="l-section section">
+                <div class="work">
+                  <h2>Resources:</h2>
+                  <p> Now that the reasons for vaping is clear, the CDC advises that parents "set a good example by being tobacco-free and ensure that your kid is not exposed to the secondhand emissions from any tobacco products, including e-cigarettes." <br><br>
+                </div>
+              </li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+  <script src="js/substances.js" type="text/javascript"></script>
+  <script src="js/usage_highschool.js" type="text/javascript"></script>
+  <script src="js/usage_middleschool.js" type="text/javascript"></script>
+  <script src="js/age.js" type="text/javascript"></script>
+  <script src="js/trends.js" type="text/javascript"></script>
+  <script src="js/reasons.js" type="text/javascript"></script>
+
+  
+</body>
+</html>
+
+<!-- Load visualizations-->
+
+
