@@ -1,12 +1,13 @@
-
-
 $( document ).ready(function() {
 
+  // DOMMouseScroll included for firefox support
   var canScroll = true,
       scrollController = null;
   $(this).on('mousewheel DOMMouseScroll', function(e){
 
     if (!($('.outer-nav').hasClass('is-vis'))) {
+
+      e.preventDefault();
 
       var delta = (e.originalEvent.wheelDelta) ? -e.originalEvent.wheelDelta : e.originalEvent.detail * 20;
 
@@ -60,7 +61,6 @@ $( document ).ready(function() {
 
   });
 
-  
 
   // determine scroll, swipe, and arrow key direction
   function updateHelper(param) {
@@ -131,11 +131,7 @@ $( document ).ready(function() {
 
   }
 
-
-
   function workSlider() {
-
-  
 
     $('.slider--prev, .slider--next').click(function() {
 
@@ -211,11 +207,7 @@ $( document ).ready(function() {
 
     });
 
-
-
-
   }
-
 
 
   function transitionLabels() {
@@ -242,7 +234,6 @@ $( document ).ready(function() {
 
   }
 
- 
   workSlider();
   transitionLabels();
 
