@@ -45,6 +45,15 @@ svg.append("text")
         .style("fill", "white")
         .text("Middle School Students");
 
+
+// Add X axis label:
+svg.append("text")
+    .attr("text-anchor", "end")
+    .attr("x", width)
+    .attr("y", height + margin.top + 50)
+    .style("fill", "white")
+    .text("Number of People");
+    
   // Add X axis
   var x = d3.scaleLinear()
     .domain([0, 3050000])

@@ -53,6 +53,16 @@ svg.append("text")
         .style("fill", "white")
         .text("High School Students");
 
+
+// Add X axis label:
+svg.append("text")
+    .attr("text-anchor", "end")
+    .attr("x", width)
+    .attr("y", height + margin.top + 50)
+    .style("fill", "white")
+    .text("Number of People");
+
+
   // Add X axis
   var x = d3.scaleLinear()
     .domain([0, 3050000])
@@ -87,13 +97,6 @@ svg.append("text")
     svg.selectAll ("tick")
       .style ('visibility','hidden')
 
-
-
-
-
-
-
-
   //Bars
   var bars = svg.selectAll("myRect")
     .data(data)
@@ -105,6 +108,9 @@ svg.append("text")
     .attr("width", function(d) { return x(d.Students); })
     .attr("height", y.bandwidth() )
     .attr("fill", "#AA4949")
+
+
+
 
 
 
@@ -122,7 +128,9 @@ svg.append("text")
           .attr("height", y.bandwidth() )
           .attr("fill", function(d){ return color(d.Products)})
           .attr("fill", "#CF9802")
-  
+
+
+
 
     }
 

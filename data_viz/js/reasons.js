@@ -46,16 +46,18 @@ const Selection = vl.selectSingle()
                      .encode(
                      vl.y().fieldN('reason').axis({labelColor: 'white', title: 'Reasons for Vaping', titleColor: 'white', labelPadding: 5, titlePadding: 10}),
                      vl.x().average('percent').axis({grid: false, labelColor: 'white', titleColor: 'white', labelPadding: 5, titlePadding: 10}).title('Average Percentage of Students'),
-                            vl.color().fieldN('reason').scale({range: ['#CF9802', '#AA4949', '#B64B03', '#FFFFFF', '#FFFFFF', '#FFFFFF','#FFFFFF','#FFFFFF','#FFFFFF']}).legend(null),
+                     vl.tooltip().average('percent').type('quantitative'),
+                     vl.color().fieldN('reason').scale({range: ['#CF9802', '#AA4949', '#B64B03', '#FFFFFF', '#FFFFFF', '#FFFFFF','#FFFFFF','#FFFFFF','#FFFFFF']}).legend(null),
                      vl.opacity().if(Selection, vl.value(0.8)).value(0.3)
                      )
                      .height(400)
   
-              const Visual1 = vl.markLine({point: true})
+              const Visual1 = vl.markLine({point: true, size: 3})
                      .data(df1)
                      .encode(
-                            vl.x().fieldN('year').title('Year').axis({labelColor: 'white', titleColor: 'white', labelPadding: 5, titlePadding: 10}),
+                     vl.x().fieldN('year').title('Year').axis({labelColor: 'white', titleColor: 'white', labelPadding: 5, titlePadding: 10}),
                      vl.y().fieldQ('percent').axis({grid: false, title: 'Percent of High-School Students', labelColor: 'white', titleColor: 'white', labelPadding: 5, titlePadding: 10}),
+                     vl.tooltip().fieldQ('percent').type('quantitative'),
                      vl.color().fieldN('reason').legend(null),
                      vl.opacity().if(Selection, vl.value(0.8)).value(0.2)
                      )

@@ -12,7 +12,6 @@
 
   <!-- Load Jquery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
   <!-- Load d3.js -->
   <script src="https://d3js.org/d3.v4.js"></script>
   <script src="https://d3js.org/d3-selection-multi.v0.4.min.js"></script>
@@ -45,6 +44,7 @@
             <li><span></span></li>
             <li><span></span></li>
             <li><span></span></li>
+            <li><span></span></li>
           </ul>
         </nav>
 
@@ -57,8 +57,8 @@
               <div class="intro--banner">
                 <h1>THE VAPING EFFECT</h1>
                 <p> A story about teengers’ e-cigarette epidemic.<p>
-                 <a href="#0">scroll to start
-                  <span>
+                 <a>scroll to start
+                                    <span>
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
                     <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000) rotate(270)">
                       <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
@@ -105,9 +105,11 @@
               <h3> Compare the usage of E-cigarretes and other tobacco products among teenagers: </h3>
               <br> 
               <!-- Initialize a select button-->
+              <div class="button">
               <select id="selectButton"></select> 
-              <h4>vs.</h4>
+              <h4>VS.</h4>
               <h4>E-cigarettes </h4>
+              </div>
               <div class="studentUsage">
                 <div id="usage_viz"></div>
                 <div id="usage_viz2"></div>
@@ -135,6 +137,23 @@
             </div>
           </li>
 
+ <!-- False Assumptions -->
+           <li class="l-section section">
+              <div class="risks">
+                <h2>The false assumption about e-cigarettes </h2>
+                <p> Lots of students believe that e-cigarettes are actually low risks to health. While there is a slow decline in population for that perception, the levels of perceived risk are stll far below those for regular cigarette use.<br><br>
+                It is important to highlight that e-cigarettes are assciated with harmful substances and consequences as following:
+                <div class="contact--lockup">
+                <ol>
+                  <ul>1. It contains nicotine, which has known health effects such has harm to adolescent brain development, addiction, acute nicotine exposure which is toxic, etc.</ul><br>
+                  <ul>2. Also contains aerosols that are cancer-causing chemicals, that reach deep into lungs.</ul> <br>
+                  <ul>3. Can cause unintended injuries such as fires and explosions from defective e-cigarettes.</ul>
+                </ol>
+                <div id="vis_risks" ></div> 
+              </div>
+                </p>
+            </li>     
+
 <!-- Call to actions -->
              <li class="l-section section">
               <div class="work">
@@ -146,13 +165,22 @@
                   <ul>2. Parents should conduct a serious discussion around the vaping behaviour and educate their kids about why e-cigarettes are harmful to them.</ul> <br>
                   <ul>3. Make youth health a compulsory and participatory subject in high-school curriculum where a significant focus in also given to vaping behavior.</ul>
                 </ol>
+                </p>
             </li>
 
-<!-- Call to actions -->
+<!-- Resources -->
                <li class="l-section section">
                 <div class="work">
                   <h2>Resources:</h2>
-                  <p> Now that the reasons for vaping is clear, the CDC advises that parents "set a good example by being tobacco-free and ensure that your kid is not exposed to the secondhand emissions from any tobacco products, including e-cigarettes." <br><br>
+                  <p> Our primary data about vaping will come from CDC’s website and from the yearly NTS surveys they conduct across schools in USA. <br> <br>
+                  <ol>
+                    <ul> • Information on Vaping related Lung Disease & THC-containing products <a href="https://www.cdc.gov/tobacco/basic_information/e-cigarettes/severe-lung-disease.html">from Center of Disease Control (CDC). </a> </ul><br>
+                    <ul> • Current state of e-cigarette usage among teenagers <a href="https://www.cdc.gov/mmwr/volumes/68/wr/mm6806e1.htm?s_cid=osh-vs-mmwr-full-001#T1_down">from CDC. </a> </ul><br>
+                    <ul> • Reasons for Electronic Cigarette Use Among Middle and High School Students <a href="https://www.cdc.gov/mmwr/volumes/68/wr/mm6806e1.htm?s_cid=osh-vs-mmwr-full-001#T1_down">from CDC.</a> </ul><br>
+                    <ul> • Additional research on E-cigarettes from <a href="https://truthinitiative.org/research-resources/emerging-tobacco-products/e-cigarettes-facts-stats-and-regulations"> Truth Initiative </a> </ul><br>
+                    <ul> • Additional research on vaping behaviors among highschool students from <a href="https://www.pewresearch.org/fact-tank/2019/09/26/vaping-survey-data-roundup/"> Pew Research Center. </a> </ul><br>
+                    <ul> • "Monitoring the Future" <a href="https://truthinitiative.org/research-resources/emerging-tobacco-products/e-cigarettes-facts-stats-and-regulations"> by the University of Michigan Institute for Social Research. </a> </ul><br>
+                  </ol>
                 </div>
               </li>
 
@@ -168,6 +196,7 @@
   <script src="js/age.js" type="text/javascript"></script>
   <script src="js/trends.js" type="text/javascript"></script>
   <script src="js/reasons.js" type="text/javascript"></script>
+  <script src="js/assumptions.js" type="text/javascript"></script>
 
   
 </body>

@@ -16,12 +16,13 @@ var df = [
 
 const selection = vl.selectSingle();
 
-		const Graph1 = vl.markLine()
+		const Graph1 = vl.markLine({point: true, size: 3})
   			.data(df)
   			.select(selection)
   			.encode(
     			vl.x().fieldN('year').axis({title: 'Year', labelColor: 'white', titleColor: 'white', labelPadding: 5, titlePadding: 10}),
    			 	vl.y().fieldQ('Percent Vaping').axis({grid: false, labelColor: 'white', titleColor: 'white', labelPadding: 5, titlePadding: 10}).title('Percentage of Students'),
+   			 	vl.tooltip().field('Percent Vaping').type('quantitative'),
      			vl.color().fieldN('class').scale({range: ['#CF9802', '#AA4949', '#B64B03']}).legend({labelColor: 'white', titleColor: 'white', title:'Grade'}),
     			vl.opacity().if(selection, vl.value(1.0)).value(0.1)
   			)

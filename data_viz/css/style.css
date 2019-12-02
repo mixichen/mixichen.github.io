@@ -13,7 +13,7 @@
 	 display: block;
 }
 
- audio, canvas, progress, video {
+ audio, canvas, progress {
 	 display: inline-block;
 	 vertical-align: baseline;
 }
@@ -29,6 +29,7 @@
 
  a {
 	 background-color: transparent;
+	 color:#CF9802;
 }
 
  a:active, a:hover {
@@ -358,6 +359,10 @@
 	 content: "08";
 }
 
+.side-nav li:nth-child(9)::before {
+	 content: "09";
+}
+
  .side-nav li.is-active {
 	 color: #fff;
 	 -webkit-transition: color 0.4s ease-in-out;
@@ -374,7 +379,7 @@
 	 color: #fff;
 }
 
-/* Introduction*/
+/* Home Page*/
 
  .intro {
 	 position: relative;
@@ -437,9 +442,6 @@
 	 font-size: 14px;
 	 text-transform: uppercase;
 	 background-color: transparent;
-}
- .intro--banner a:hover svg {
-	 bottom: 10px;
 }
  .intro--banner a svg {
 	 position: relative;
@@ -519,7 +521,7 @@
 }
 
 
-/* Slide 2: Disease Outbreak */
+/* Slide 2: Disease Outbreak (Also Slide 6 & 8) */
  .work {
 	 position: relative;
 	 display: -webkit-box;
@@ -714,7 +716,7 @@
 }
 
 
-/* Slide 2: Cause of disease */
+/* Slide 3: Cause of disease */
 
  .contact {
 	 position: relative;
@@ -760,7 +762,7 @@
 	 display: -ms-flexbox;
 	 display: flex;
 	 width: 900px;
-	 max-width: 75%;
+	 max-width: 120%;
 	 height: 80%;
 	 -webkit-box-align: center;
 	 -webkit-align-items: center;
@@ -791,7 +793,7 @@
 
 
 
-/* Slide 3: Popularity of e-cigarrate */
+/* Slide 4: Popularity of e-cigarrate */
  .about {
 	 position: relative;
 	 display: -webkit-box;
@@ -868,6 +870,16 @@
 .about--banner h2{
 	position: relative;
 	text-align: center;
+}
+
+.about--banner h4{
+	line-height: 40px;
+}
+
+.button{
+	position: relative;
+	left: 70px;
+	top: 35px;
 }
 
 .about--banner svg{
@@ -994,7 +1006,7 @@ select {
 
 
 
-
+/* Slide 5: Usage Has Increased */
  .hire {
 	 position: relative;
 	 display: -webkit-box;
@@ -1025,152 +1037,7 @@ select {
 		 max-width: 100%;
 	}
 }
- .work-request {
-	 display: -webkit-box;
-	 display: -webkit-flex;
-	 display: -ms-flexbox;
-	 display: flex;
-	 width: 100%;
-	 -webkit-box-orient: vertical;
-	 -webkit-box-direction: normal;
-	 -webkit-flex-direction: column;
-	 -ms-flex-direction: column;
-	 flex-direction: column;
-	 -webkit-box-align: center;
-	 -webkit-align-items: center;
-	 -ms-flex-align: center;
-	 align-items: center;
-	 color: #fff;
-}
- .work-request input[type="submit"] {
-	 width: 400px;
-	 max-width: 100%;
-	 line-height: 50px;
-	 font-size: 16px;
-	 font-weight: 700;
-	 text-transform: uppercase;
-	 background-color: #0f33ff;
-	 border: none;
-	 border-radius: 0;
-}
- .work-request input[type="submit"]:focus {
-	 outline: none;
-}
- .work-request--options {
-	 display: -webkit-box;
-	 display: -webkit-flex;
-	 display: -ms-flexbox;
-	 display: flex;
-	 width: 100%;
-	 -webkit-box-orient: vertical;
-	 -webkit-box-direction: normal;
-	 -webkit-flex-direction: column;
-	 -ms-flex-direction: column;
-	 flex-direction: column;
-	 -webkit-box-align: center;
-	 -webkit-align-items: center;
-	 -ms-flex-align: center;
-	 align-items: center;
-	 margin: 30px 0;
-}
- .work-request--options .options-a {
-	 display: -webkit-box;
-	 display: -webkit-flex;
-	 display: -ms-flexbox;
-	 display: flex;
-	 width: 100%;
-	 -webkit-box-pack: justify;
-	 -webkit-justify-content: space-between;
-	 -ms-flex-pack: justify;
-	 justify-content: space-between;
-}
- .work-request--options .options-b {
-	 display: -webkit-box;
-	 display: -webkit-flex;
-	 display: -ms-flexbox;
-	 display: flex;
-	 width: 72%;
-	 -webkit-flex-wrap: wrap;
-	 -ms-flex-wrap: wrap;
-	 flex-wrap: wrap;
-	 -webkit-justify-content: space-around;
-	 -ms-flex-pack: distribute;
-	 justify-content: space-around;
-}
- .work-request--options label {
-	 display: block;
-	 width: 200px;
-	 margin-bottom: 30px;
-	 line-height: 50px;
-	 font-size: 16px;
-	 font-weight: 700;
-	 text-align: center;
-	 border: 2px solid #fff;
-	 cursor: pointer;
-	 -webkit-transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-	 transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-}
- .work-request--options label svg {
-	 position: relative;
-	 left: -5px;
-	 width: 0;
-	 fill: #fff;
-	 -webkit-transition: width 0.2s ease-in-out;
-	 transition: width 0.2s ease-in-out;
-}
- .work-request--options input[type="checkbox"] {
-	 display: none;
-}
- .work-request--options input[type="checkbox"]:checked + label {
-	 background-color: #0f33ff;
-	 border-color: #0f33ff;
-}
- .work-request--options input[type="checkbox"]:checked + label svg {
-	 width: 15px;
-}
- .work-request--information {
-	 display: -webkit-box;
-	 display: -webkit-flex;
-	 display: -ms-flexbox;
-	 display: flex;
-	 width: 100%;
-	 -webkit-box-pack: justify;
-	 -webkit-justify-content: space-between;
-	 -ms-flex-pack: justify;
-	 justify-content: space-between;
-	 margin-bottom: 60px;
-}
- .work-request--information .information-name, .work-request--information .information-email {
-	 position: relative;
-	 width: 45%;
-	 height: 50px;
-	 font-size: 30px;
-	 font-weight: 300;
-}
- .work-request--information input[type="text"], .work-request--information input[type="email"] {
-	 width: 100%;
-	 padding: 0 0 5px 0;
-	 background-color: transparent;
-	 border: none;
-	 border-bottom: 1px solid #fff;
-	 border-radius: 0;
-}
- .work-request--information input[type="text"]:focus, .work-request--information input[type="email"]:focus {
-	 outline: none;
-	 background-color: #0c0c0c;
-}
- .work-request--information label {
-	 position: absolute;
-	 top: 0;
-	 left: 0;
-	 pointer-events: none;
-	 -webkit-transition: top 0.2s ease-in-out, font-size 0.2s ease-in-out;
-	 transition: top 0.2s ease-in-out, font-size 0.2s ease-in-out;
-}
- .work-request--information input:focus + label, .work-request--information input.has-value + label {
-	 top: -15px;
-	 font-size: 14px;
-}
+ 
  @media (max-width: 767px) {
 	 .work-request--options {
 		 -webkit-box-orient: horizontal;
@@ -1217,6 +1084,71 @@ select {
 		 font-size: 24px;
 	}
 }
+
+
+
+/* Slide 7: False Assumptions; */
+ .risks {
+	 position: relative;
+	 display: -webkit-box;
+	 display: -webkit-flex;
+	 display: -ms-flexbox;
+	 display: flex;
+	 width: 960px;
+	 max-width: 80%;
+	 height: 100%;
+	 -webkit-box-direction: normal;
+	 -webkit-flex-direction: column;
+	 -ms-flex-direction: column;
+	 flex-direction: column;
+	 -webkit-box-pack: center;
+	 -webkit-justify-content: center;
+	 -ms-flex-pack: center;
+	 justify-content: center;
+	 margin: 0 auto;
+}
+
+ .risks h2 {
+ 	position: relative;
+ 	top: 50px;
+	 font-size: 30px;
+	 text-align: center;
+}
+
+ .risks p {
+ 	position: relative;
+ 	top: 50px;
+
+ }
+
+
+ .risks ol {
+ 	position: relative;
+	left: -80px;
+	bottom: 50px;
+}
+
+ .risks svg {
+ 	position: relative;
+	 display: -webkit-box;
+	 display: -webkit-flex;
+	 display: -ms-flexbox;
+	 display: flex;
+	 justify-content: center;
+	 margin: 0 0 20px 0;
+	 left: 300px;
+
+}
+
+
+
+ @media (max-width: 1180px) {
+	 .work {
+		 max-width: 100%;
+	}
+}
+
+
  .perspective {
 	 position: relative;
 	 width: 100%;

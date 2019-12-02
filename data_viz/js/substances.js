@@ -60,6 +60,7 @@ svg.append("text")
     .text("Number of People");
 
 
+
 svg.append("text")
         .attr("x", (width / 2)-70)             
         .attr("y", -20)
@@ -67,6 +68,7 @@ svg.append("text")
         .style("font-size", "15px") 
         .style("fill", "white")
         .text("Substances used in e-cigarette, or vaping, products (n = 514)");
+
 
  // Color scale: give me a specie name, I return a color
   var color = d3.scaleOrdinal()
@@ -77,10 +79,12 @@ svg.append("text")
   svg.selectAll(".tick text").attr("fill", "white")
 
  //Bars
-  svg.selectAll("myRect")
+  var bars = svg.selectAll("myRect")
     .data(data)
     .enter()
-    .append("rect")
+    .append("g")
+
+    bars.append("rect")
     .attr("x", x(0) )
     .attr("y", function(d) { return y(d.substances); })
     .attr("width", function(d) { return x(d.number); })
@@ -88,5 +92,20 @@ svg.append("text")
     .style("fill", function (d) { return color(d.substances); } )
     .style("opacity", 0.8)
 
+    bars.append("text")
+            .attr("class", "label")
+            //y position of the label is halfway down the bar
+            .attr("y", function (d) {
+                return y(d.substances) + y.bandwidth() / 2 + 4;
+            })
+            //x position is 3 pixels to the right of the bar
+            .attr("x", function (d) {
+                return x(d.number) + 6;
+            })
+            .style("fill", "white")
+            .text(function (d) {
+                return d.number;
+            });
+            
 
 
