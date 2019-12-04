@@ -473,9 +473,7 @@ h2 {
 	 text-transform: uppercase;
 	 background-color: transparent;
 }
- .intro--banner a:hover svg {
-	 bottom: 10px;
-}
+
  .intro--banner a svg {
 	 position: relative;
 	 bottom: 50px;
